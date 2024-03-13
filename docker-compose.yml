@@ -1,0 +1,11 @@
+version: '3'
+services:
+  node:
+    image: node:alpine
+    volumes:
+      - ./:/app
+    working_dir: /app
+    command:
+     - /bin/sh
+     - '-C'
+     - 'npm install && npm start'
